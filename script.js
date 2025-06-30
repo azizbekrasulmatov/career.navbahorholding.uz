@@ -1,6 +1,6 @@
 async function fetchVacancies() {
     try {
-        // const response = await fetch('https://api.hh.ru/vacancies?employer_id=4893760');
+        const response = await fetch('https://api.hh.ru/vacancies?employer_id=4893760');
         const data = await response.json();
         const vacanciesContainer = document.getElementById('vacancies');
         vacanciesContainer.innerHTML = '';
