@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>КАРЬЕРА</title>
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/burger.css">
     <link rel="stylesheet" href="style/fonts.css">
+    <link rel="icon" href="img/icon.png">
 </head>
 
 <body>
-<header class="header">
+<header class="header" id="header">
     <div class="header__nav">
         <div class="container">
             <div class="nav__box">
@@ -17,8 +19,8 @@
                     <img src="img/holding-logo.png" alt="">
                 </a>        
             </div>
-            <button class="nav__burger" onclick="toggleMenu()">
-                <img src="img/menu.svg" alt="">  
+            <button class="burger">
+                <span></span>
             </button>
             <ul class="nav__list">
                 <li><a href="#direction" class="nav__list-link">О компании</a></li>
@@ -179,7 +181,7 @@
             </div>
         </div>
     </section>
-    <section class="vacancy">
+    <section class="vacancy" id="vacancy__tolink">
         <h2 class="vacancy__title">Актуальные вакансии</h2>
         <p class="vacancy__text">Ваш путь начинается здесь.</p>
         <div class="container">
@@ -204,7 +206,8 @@
           <button class="faq__question">2. Как подготовиться к собеседованию?</button>
           <div class="faq__answer">
             <ul>
-              <li>Ознакомьтесь с компанией и ее вакансиями.</li>
+              <li>Ознакомьтесь с компанией и ее 
+                <a href="#vacancy__tolink">вакансиями</a>.</li>
               <li>Подготовьте интересующие вас вопросы.</li>
               <li>Запишите их.</li>
             </ul>
@@ -213,7 +216,10 @@
         <div class="faq__item">
           <button class="faq__question">3. Какие этапы отбора проходят кандидаты?</button>
           <div class="faq__answer">
-            <p>Телефонное интервью, очное интервью в два этапа.</p>
+            <ul>
+                <li>Первый этап — Телефонное интервью.</li>
+                <li>Второй этап — Очное интервью.</li>
+            </ul>
           </div>
         </div>
         <div class="faq__item">
@@ -238,32 +244,52 @@
                             <img class="" src="img/tell.svg" alt="">
                             <h2>ТЕЛЕФОН</h2>
                         </div>
-                        <p>График работы:<br>Пн – Пт, 09:00 – 18:00</p>
-                        <a href="tel:+998931113308">+998 93 111 33 08</a>
-                        <a href="tel:+998931233308">+998 93 123 33 08</a>
-                    </div>
-                    <div class="contact__box-email">
-                        <div class="contact__box-email-flex">
-                            <img class="" src="img/email.svg" alt="">
-                            <h2>ЭЛЕКТРОННАЯ ПОЧТА</h2>
+                        <div class="contact__box-tell-block">
+                            <p>График работы:<br>Пн – Пт, 09:00 – 18:00</p>
+                            <ul>
+                                <li>
+                                    <p>Фаррух</p> 
+                                    <a href="tel:+998931113308">+998 93 111 33 08</a>
+                                </li>
+                                <li>
+                                    <p>Луиза</p> 
+                                    <a href="tel:+998931113308">+998 93 123 33 08</a>
+                                </li>
+                                <li>
+                                    <p>Муслима</p> 
+                                    <a href="tel:+998931113308">+998 93 555 33 08</a>
+                                </li>
+                                <li>
+                                    <p>Акмаль</p> 
+                                    <a href="tel:+998931113308">+998 93 111 55 58</a>
+                                </li>
+                            </ul>
                         </div>
-                        <a class="contact__box-email-a" href="mailto:navbahorhr@gmail.com">navbahorhr@gmail.com</a>
                     </div>
-                    <div class="contact__box-social">
-                        <div class="contact__box-social-flex">
-                            <img src="img/social.svg" alt="">
-                            <h2>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h2>
+                    <div class="contact__box-column">
+                        <div class="contact__box-email">
+                            <div class="contact__box-email-flex">
+                                <img class="" src="img/email.svg" alt="">
+                                <h2>ЭЛЕКТРОННАЯ ПОЧТА</h2>
+                            </div>
+                            <a class="contact__box-email-a" href="mailto:navbahorhr@gmail.com">navbahorhr@gmail.com</a>
                         </div>
-                        <div class="contact__box-social-a">
-                            <a target="_blank" href="https://t.me/Navbahordorixona">
-                                <img src="img/tg.svg" alt="">
-                            </a>
-                            <a target="_blank" href="https://www.instagram.com/navbahor_uzb?igsh=NTc4MTIwNjQ2YQ==">
-                                <img src="img/insta.svg" alt="">
-                            </a>
-                            <a target="_blank" href="https://www.linkedin.com/company/navbahor-group-of-companies/">
-                                <img src="img/in.svg" alt="">
-                            </a>
+                        <div class="contact__box-social">
+                            <div class="contact__box-social-flex">
+                                <img src="img/social.svg" alt="">
+                                <h2>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h2>
+                            </div>
+                            <div class="contact__box-social-a">
+                                <a target="_blank" href="https://t.me/Navbahordorixona">
+                                    <img src="img/tg.svg" alt="">
+                                </a>
+                                <a target="_blank" href="https://www.instagram.com/navbahor_uzb?igsh=NTc4MTIwNjQ2YQ==">
+                                    <img src="img/insta.svg" alt="">
+                                </a>
+                                <a target="_blank" href="https://www.linkedin.com/company/navbahor-group-of-companies/">
+                                    <img src="img/in.svg" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -281,16 +307,35 @@
 
 <footer class="footer">
     <div class="container">
-        <a href="" class="footer__logo">
-            <img src="img/holding-logo.png" alt="">
-        </a>
-        <div class="footer__box">
-            
+        <div class="footer__dad">
+            <div class="footer__block">
+                <a href="#header" class="footer__logo">
+                    <img src="img/holding-logo.png" alt="">
+                </a>
+                <div class="footer__box">
+                    <p class="footer__box-title">Услуги</p>
+                    <ul class="footer__box-ul">
+                        <a href="https://navbahor-exclusive.uz/" class="footer__box-li" target="_blank">Navbahor Exclusive</a>
+                        <a href="https://navbahor-marketing.uz/" class="footer__box-li" target="_blank">Navbahor Marketing</a>
+                        <a href="https://navbahor-sanoat.uz/" class="footer__box-li" target="_blank">Navbahor Sanoat</a>
+                        <a href="https://memory-ag.uz/" class="footer__box-li" target="_blank">Memory Pharm A.G.</a>
+                        <a href="https://rompharmns.uz/" class="footer__box-li" target="_blank">Rompharm</a>
+                        <a href="https://navbahor-apteka.uz/" class="footer__box-li" target="_blank">Navbahor Apteka</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__tell">
+                <a href="tel:+998712037030" class="footer__tell-link">
+                    <img src="img/tel-footer.svg" alt="">
+                    <p>+998(71) 203-70-30</p>
+                </a>
+            </div>
         </div>
     </div>
 </footer>
 
     <script src="script.js"></script>
+    <script src="burger.js"></script>
     <script src="faq.js"></script>
 </body>
 </html>

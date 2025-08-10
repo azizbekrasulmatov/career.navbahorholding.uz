@@ -1,0 +1,70 @@
+.burger {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .burger {
+        display: block;
+        background: none;
+        outline: none;
+        border: none;
+        position: fixed;
+        width: 30px;
+        height: 25px;
+        top: 25px;
+        right: 35px;
+        z-index: 1101;
+        cursor: pointer;
+    }
+    .burger::before,
+    .burger::after,
+    .burger span {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        transition: .3s;
+    }
+    
+    .burger::before {
+        content: '';
+        top: 0;
+    }
+    .burger::after {
+        content: '';
+        bottom: 0;
+    }
+    .burger span {
+        top: 11px;
+    }
+    
+    .burger.active::before {
+        rotate: 45deg;
+        top: 12px;
+    }
+    .burger.active::after {
+        rotate: -45deg;
+        top: 10px;
+    }
+    .burger.active span {
+        rotate: 45deg;
+        top: 12px;
+    }
+    .nav__list {
+        display: none;
+    }
+    .nav__list.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #111;
+        width: 220px;
+        height: 100vh;  
+        padding: 80px 20px;
+        gap: 30px;
+        transition: right 0.35s ease-in-out;
+    }
+    
+}

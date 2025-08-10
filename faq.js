@@ -5,7 +5,7 @@ faqItems.forEach(item => {
     const answer = item.querySelector('.faq__answer');
 
     question.addEventListener('click', () => {
-    // Закрыть все открытые
+    // закрыть все открытые
     faqItems.forEach(otherItem => {
       const otherAnswer = otherItem.querySelector('.faq__answer');
       if (otherItem !== item) {
@@ -14,7 +14,7 @@ faqItems.forEach(item => {
       }
     });
 
-    // Переключить текущий
+    // переключить текущий
     const isOpen = item.classList.contains('active');
     if (isOpen) {
         item.classList.remove('active');
@@ -26,7 +26,7 @@ faqItems.forEach(item => {
 });
 });
 
-// Чтобы при ресайзе не ломалась высота
+// чтобы при ресайзе не ломалась высота
 window.addEventListener('resize', () => {
     document.querySelectorAll('.faq__item.active .faq__answer').forEach(answer => {
     answer.style.height = answer.scrollHeight + 'px';

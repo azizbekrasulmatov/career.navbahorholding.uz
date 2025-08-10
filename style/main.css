@@ -18,7 +18,17 @@ a {
     max-width: 1250px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 25px;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+img, video {
+    height: auto;
+    display: block;
 }
 
 /* header */ 
@@ -32,6 +42,7 @@ a {
     width: 100%;
     backdrop-filter: blur(7.5px);
     background: rgba(1, 3, 5, 0.8);
+    padding: 0 40px;
 }
 .nav__box {
     display: flex;
@@ -42,12 +53,6 @@ a {
 }
 .nav__logo img {
     width: 184px;
-}
-.nav__burger {
-    display: none;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
 }
 .nav__burger img {
     width: 100%;
@@ -60,6 +65,14 @@ a {
     align-items: center;
     justify-content: center;
     gap: 50px;
+}
+.nav__list li {
+    width: 110px;
+}
+.nav__list li:nth-last-child(3),
+.nav__list li:nth-last-child(2),
+.nav__list li:nth-last-child(1){
+    width: auto;
 }
 .nav__list-link {
     width: auto;
@@ -130,6 +143,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 15px;
 }
 .welcome__title {
     font-family: 'MB';
@@ -162,7 +176,6 @@ a {
     font-family: 'MM';
     font-size: 25px;
 }
-
 .welcome__box-img:first-child {
     height: 200px;
 }
@@ -204,44 +217,51 @@ a {
     font-size: 36px;
     margin: 0 30px;
 }
+
 /* Ключевая бесшовная анимация */
+
 @keyframes scroll-right {
-from {
-    transform: translateX(-50%);
-}
-to {
-    transform: translateX(0%);
-}
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0%);
+    }
 }
 .direction__text {
     margin-top: 40px;
     font-family: 'MB';
     text-align: center;
     font-size: 40px;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
-
 .direction__box {
     display: flex;
-    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
 }
 .direction__box-item {
-    width: 400px;
-    height: 50px;
     display: flex;
+    justify-content: center;
     gap: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    height: -webkit-fill-available;
 }
 .direction__box-item img {
     border: 2px black solid;
     border-radius: 50%;
     width: 50px;
+    height: 50px;
     padding: 5px;
 }
 .direction__box-item-text {
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 100px;
     gap: 10px;
 }
 .direction__box-item-text h2 {
@@ -251,12 +271,8 @@ to {
     font-family: 'MM';
 }
 
-
 /* career */
 
-.career {
-    margin-top: 150px;
-}
 .career__title {
     font-family: 'MB';
     text-align: center;
@@ -264,7 +280,7 @@ to {
     padding: 30px 0;
 }
 .career__box {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/photo2.jpg) no-repeat center /cover ;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/photo2.jpg) no-repeat center /cover ;   
     box-shadow: 0px -2px 20px 2px rgba(34, 80, 57, 0.2);    
     display: flex;
     flex-direction: column;
@@ -337,7 +353,6 @@ to {
     height: 2px;
     background: black;
 }
-
 .career__why-box-item-text {
     display: flex;
     flex-direction: column;
@@ -399,17 +414,19 @@ to {
     color: white;
     font-size: 20px;
 }
-
 .training__text {
+    max-width: 1300px;
     margin-top: 40px;
     font-size: 25px;
     text-align: center;
     font-family: 'MM';
+    padding: 0 20px;
 }
 
 /* corporate */
 
 .corporate {
+    width: 100%;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
@@ -422,22 +439,25 @@ to {
     font-size: 40px;
 }
 .corporate__text {
+    width: 100%;
     margin-top: 20px;
     font-size: 25px;
     text-align: center;
     font-family: 'MM';
+    padding: 0 30px;
 }
 .corporate__box {
     margin-top: 50px;
     display: flex;
-    width: 1200px;
     align-items: center;
     justify-content: space-between;
+    gap: 50px;
+    padding: 0 30px;
 }
 .corporate__box-item {
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 250px;
     gap: 10px;
 }
 .corporate__box-item img {
@@ -451,14 +471,14 @@ to {
 /* vacancy */
 
 .vacancy {
-    margin-top: 50px;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(90deg, #339933 0%, #99ff33 100%);
     border-radius: 50px;
     height: 100%;
-    padding: 50px 0;
+    padding: 50px 40px;
 }
 .vacancy__title {
     color: white;
@@ -501,7 +521,6 @@ to {
     border-radius: 12px;
     background: white;
 }
-
 .vacancy__link {
     width: 350px;
     display: flex;
@@ -512,8 +531,8 @@ to {
     border-radius: 8px;
     background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
     transition: all 500ms;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.05);
-    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
+    0 1px 4px rgba(0, 0, 0, 0.06); 
     text-decoration: none;
     color: inherit;
 }
@@ -527,7 +546,6 @@ to {
     width: 100%;
     font-size: 20px;
 }
-
 .vacancy__link p {
     margin-top: 20px;
     color: white;
@@ -539,7 +557,7 @@ to {
 .faq {
     max-width: 1200px;
     margin: 60px auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 .faq__title {
     font-size: 40px;
@@ -554,7 +572,6 @@ to {
     color: #444;
     font-family: 'MM';
 }
-  
 .faq__item {
     border-bottom: 3px solid #ddd;
 }
@@ -593,23 +610,24 @@ to {
 }
 .faq__answer a {
     color: #007BFF;
-    text-decoration: underline;
     font-family: 'MB';
 }
-
-
+.faq__answer a:hover {
+    text-decoration: underline;
+}
+.faq__answer ul li {
+    font-family: 'MM';
+}
 
 /* contact */
 
 .contact {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
     background: hsl(152, 46%, 86%);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.05);
     border-radius: 50px 50px 0 0 ;
     padding: 20px;
-    height: 1300px;
 }
 .contact__title {
     color: black;
@@ -635,15 +653,19 @@ to {
 .contact__text-item a {
     color: blue;
     font-family: 'MM';
+}
+.contact__text-item a:hover {
     text-decoration: underline;
 }
 .contact__box {
     width: 1200px;
     display: flex;
+    flex-direction: column;
     margin-top: 50px;
     padding: 30px;
     align-items: center;
     justify-content: space-around;
+    gap: 10px;
 }
 .contact__box-tell {
     display: flex;
@@ -651,8 +673,7 @@ to {
     gap: 5px;
     padding: 15px 20px;
     border-radius: 20px;
-    width: 300px;
-    height: 220px;
+    width: 100%;
     background: #f5fffa;
 }
 .contact__box-tell-img {
@@ -668,8 +689,26 @@ to {
     padding: 5px;
 }
 .contact__box-tell-img h2 {
-    font-size: 17px;
-    font-family: 'ML';
+    font-size: 20px;
+    font-family: 'MM';  
+}
+.contact__box-tell-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contact__box-tell-block ul {
+    display: flex;
+    gap: 30px;
+}
+.contact__box-tell-block ul li {
+    background: hsl(150, 46%, 89%);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
 }
 .contact__box-tell p {
     font-family: 'MM';
@@ -686,6 +725,15 @@ to {
     text-decoration: underline;
 }
 
+/* column */
+
+.contact__box-column {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
 /* email */
 
 .contact__box-email {
@@ -694,8 +742,8 @@ to {
     gap: 10px;
     padding: 15px 20px;
     border-radius: 20px;
-    width: 300px;
-    height: 220px;
+    width: 100%;
+    height: 100%;
     background: #f5fffa;
 }
 .contact__box-email-flex {
@@ -710,6 +758,7 @@ to {
     padding: 5px;
 }
 .contact__box-email-flex h2 {
+    font-family: 'MM';
     font-size: 17px;
 }
 .contact__box-email a {
@@ -730,13 +779,14 @@ to {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 23px 20px;
+    padding: 15px 20px;
     border-radius: 20px;
-    width: 350px;
-    height: 220px;
+    width: 100%;
+    height: 100%;
     background: #f5fffa;
 }
 .contact__box-social h2 {
+    font-family: 'MM';
     font-size: 17px;
 }
 .contact__box-social-flex {
@@ -763,6 +813,15 @@ to {
 .contact__box-social-a a img:hover {
     transform: scale(1.3);
 }
+.contact__box,
+.contact__box-tell-block > div,
+.contact__box-email,
+.contact__box-social {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
+                0 1px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    background: #fff;
+}
 
 /* location */
 
@@ -772,6 +831,7 @@ to {
     align-items: center;
 }
 .contact__location-title {
+    margin-top: 50px;
     font-size: 30px;
     text-align: center;
     font-family: 'MM';
@@ -799,97 +859,596 @@ to {
 .footer {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 400px;
     background: black;
     padding: 50px 40px;
+}
+.footer__dad {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.footer__block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .footer__logo img {
     width: 200px;
 }
 .footer__box {
     display: flex;
+    flex-direction: column;
+}
+.footer__box-title {
+    color: white;
+    font-size: 20px;
+}
+.footer__box-ul {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer__box-ul a {
+    color: white;
+    transition: all 300ms;
+}
+.footer__box-ul a:hover {
+    color: gray;
 }
 
+.footer__tell {
+    display: flex;
+}
+.footer__tell a {
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    padding: 5px 10px;
+}
+.footer__tell p {
+    color: white;
+    font-family: 'MM';
+}
+.footer__tell-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer__tell-link img {
+    padding: 5px 10px 5px 0;
+    width: 40px;
+}
 
-/* media requests */
-
+/* MEDIA REQUESTS MEDIA REQUESTS MEDIA REQUESTS */
 
 @media (max-width: 1350px) {
+    .welcome__title {
+        font-size: 30px;
+    }
+    .direction__title {
+        font-size: 30px;
+    }
+    .track__item img {
+        width: 250px;
+    }   
+    .direction__text {
+        margin-top: 20px;
+        font-size: 30px;
+        padding: 20px;
+    }
     .corporate__box {
         flex-wrap: wrap;
-        width: 100%;
+        justify-content: center;
     }
-    
+    .line-top,
+    .line-bottom {
+        left: 25.5px;
+    }
     .corporate__box-item img {
-        width: 200px;
+        width: 220px;
     }
-    
+    .career__title {
+        font-size: 30px;
+    }
+    .career__box {
+        height: 350px;
+    }
+    .career__box-text:first-child {
+        font-size: 20px;
+    }
+    .career__box-text {
+        font-size: 20px;
+    }
+    .career__why-title {
+        font-size: 30px;
+    }
+    .career__why-box-item {
+        width: 500px;
+    }
+    .career__why-box-item img {
+        width: 50px;
+    }
+    .career__why-box-item-text p {
+        font-size: 20px;
+    }
+    .training__box {
+        height: 100%;
+    }
+    .training__title {
+        font-size: 30px;
+    }
+    .training__box-title {
+        font-size: 25px;
+    }
+    .training__box-text {
+        font-size: 20px;
+    }
+    .training__box-list-text {
+        font-size: 16px;
+    }
+    .training__text {
+        font-size: 20px;
+    }
+    .corporate__title {
+        font-size: 30px;
+    }
+    .corporate__text {
+        font-size: 20px;
+    }
+    .vacancy__title {
+        font-size: 30px;
+    }
+    .vacancy__text {
+        font-size: 25px;
+    }
+    .vacancy__ul-li {
+        font-size: 20px;
+        text-align: left;
+    }
+    .vacancy__link {
+        width: 280px;
+    }
+    .faq__title {
+        font-size: 30px;
+    }
+    .faq__intro {
+        font-size: 20px;
+    }
+    .faq__question {
+        font-size: 20px;
+    }
+    .faq__answer p {
+        font-size: 16px;
+    }
+    .contact__title {
+        font-size: 30px;
+    }
+    .contact__text-item:first-child {
+        font-size: 25px;
+    }
+    .contact__text-item {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 1320px) {
     .direction__box {
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 100px;
     }
 }
 
-
-@media (max-width: 1200px) {
-.track__item  {
-   font-size: 20px;
-}
-}
-
-/* buger */
-
-
-
-@media (max-width: 580px) {
-.nav__box-list {
-    position: fixed; /* фиксированное, поверх всего */
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 220px;
-    background: #111;
-    flex-direction: column;
-    padding: 80px 20px 20px;
-    gap: 20px;
-    transform: translateX(100%); /* за пределы экрана */
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-    display: flex;
-}
+@media (max-width: 1250px) {
+    .track__item  {
+        font-size: 20px;
+    }
 }
 
-/* buger */
+@media (max-width: 1050px) {
+    .contact__box-tell-block ul {
+        justify-content: space-between;
+    }
+    .contact__box-tell-block li p {
+        font-size: 14px;
+    }
+    .contact__box-tell-block li a {
+        font-size: 14px;
+    }
+    .contact__location-map iframe {
+        width: 750px;
+        height: 300px;
+    }
 
-
-
-@media (max-width: 580px) {
-/* Показываем бургер‑кнопку */
-.nav__burger {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 26px;
-    cursor: pointer;
-    z-index: 1001;
-}
-.training__text {
-    width: 100%;
-}
-
-.nav__box-list.open {
-    transform: translateX(0); /* выезжает */
 }
 
-.nav__burger {
-    display: block;
-    font-size: 26px;
-    cursor: pointer;
-    z-index: 1001;
-    position: relative;
+@media (max-width: 1000px) {
+    .nav__logo img {
+        width: 140px;
+    }
+    .nav__list {
+        gap: 30px;
+    }
+    .nav__list li {
+        width: 95px;
+    }
+    .nav__list-link {
+        font-size: 14px;
+    }
+    .welcome__title {
+        font-size: 25px;
+    }
+    .welcome__box-text p {
+        font-size: 20px;
+    }
+    .welcome__box-img:first-child {
+        height: 150px;
+    }
+    .welcome__box-img:last-child {
+        height: 120px;
+    }
+    .direction__text {
+        font-size: 25px;
+    }
+    .footer__logo img {
+        width: 150px;
+    }
+    .footer__box-title {
+        font-size: 18px;
+    }
+    .footer__box-ul a {
+        font-size: 12px;
+    }
+    .footer__tell p {
+        font-size: 12px;
+    }
+    .footer__tell-link img {
+        width: 30px;
+    }
 }
+
+@media (max-width: 860px) {
+    .header__content-title {
+        font-size: 60px;
+    }
+    .header__content-text {
+        font-size: 35px;
+        width: 545px;
+    }
+    .welcome__title {
+        font-size: 20px;
+    }
+    .contact__location-map iframe {
+        width: 500px;
+    }
+    .track {
+        gap: 5px;
+    }
+    .track__item img {
+        width: 200px;
+    }   
+    .direction__text {
+        font-size: 20px;
+    }
+    .direction__box-item {
+        width: 300px;
+    }
+    .direction__box-item img {
+        width: 40px;
+        height: 40px;
+    }
+    .career__why-title {
+        font-size: 25px;
+    }
+    .career__why-box {
+        gap: 20px;
+    }
+    .career__why-box-item img {
+        width: 45px;
+    }
+    .career__why-box-item-text {
+        width: 350px;
+    }
+    .career__why-box-item-text p {
+        font-size: 16px;
+    }
+    .direction__box-item-text p, h2 {
+        font-size: 12px;
+    }
+    .direction__box-item-text h2 {
+        font-size: 16px;
+    }
+    .arrow {
+        width: 30px;
+    }
+    .line-top {
+        left: 48.5px;
+        height: 30px;
+        bottom: 215px;
+    }
+    .line-bottom {
+        left: 48.5px;
+        height: 30px;
+    }
+    .training__title {
+        font-size: 25px;
+    }
+    .training__box-title {
+        margin-top: 10px;
+        font-size: 22px;
+    }
+    .training__box-text {
+        font-size: 18px;
+    }
+    .training__box-list-text {
+        font-size: 14px;
+    }
+    .training__text {
+        font-size: 16px;
+    }
+    .corporate__box-item {
+        height: 210px;
+    }
+    .corporate__box-item img {
+        width: 180px;
+    }
+    .corporate__title {
+        font-size: 25px;
+    }
+    .corporate__text {
+        font-size: 18px;
+    }
+    .vacancy {
+        padding: 20px 40px;
+    }
+    .vacancy__title {
+        font-size: 25px;
+    }
+    .vacancy__text {
+        font-size: 20px;
+    }
+    .vacancy__ul-li {
+        max-width: 620px;
+        width: 100%;
+        font-size: 16px;
+    }
+    .faq__title {
+        font-size: 25px;
+    }
+    .faq__intro {
+        font-size: 16px;
+    }
+    .faq__question {
+        font-size: 16px;
+    }
+    .faq__question::after {
+        font-size: 25px;
+    }
+    .faq__answer p, .faq__answer ul {
+        font-size: 14px;
+    }
+    .contact__title {
+        font-size: 25px;
+    }
+    .contact__text-item:first-child {
+        font-size: 20px;
+    }
+    .contact__text-item {
+        font-size: 14px;
+    }
+    .contact__box-column {
+        flex-direction: column;
+    }
+    .contact__box-tell-block ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .contact__box-tell-img img,
+    .contact__box-email-flex img,
+    .contact__box-social-flex img {
+        width: 35px;
+    }
+    .contact__box-tell-img h2,
+    .contact__box-email-flex h2,
+    .contact__box-social h2 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 700px) {
+    .vacancy__link {
+        width: 200px;
+        padding: 10px;
+    }
+    .vacancy__link h2 {
+        font-size: 14px;
+    }
+    .vacancy__link p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header__content-title {
+        font-size: 40px;
+    }
+    .header__content-text {
+        font-size: 25px;
+        width: 365px;
+    }
+}
+
+@media (max-width: 540px) {
+    .vacancies__box {
+        gap: 10px;
+    }
+    .vacancy__link {
+        width: 100%;
+    }
+    .contact__location-map iframe {
+        width: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav__logo img {
+        width: 100px;
+    }
+    .header__content-box {
+        gap: 10px;
+    }
+    .header__content-title {
+        font-size: 30px;
+    }
+    .header__content-text {
+        font-size: 20px;
+        width: 273px;
+    }
+    .welcome__title {
+        font-size: 15px;
+    }
+    .welcome__box {
+        margin-top: 30px;
+    }
+    .welcome__box-img:first-child {
+        height: 110px;
+    }
+    .welcome__box-img:last-child {
+        height: 80px;
+    }
+    .welcome__box-text {
+        border-radius: 20px;
+        padding: 10px 5px;
+        gap: 20px;
+    }
+    .welcome__box-text p {
+        font-size: 12px;
+    }
+    .direction {
+        margin-top: 20px;
+    }
+    .direction__title {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+    .track__item img {
+        width: 160px;
+    }
+    .direction__infinite-slider {
+        padding: 5px;
+    }
+    .career__box {
+        gap: 30px;
+    }
+    .career__box-text:first-child {
+        font-size: 16px;
+    }
+    .career__box-text {
+        font-size: 16px;
+    }
+    .career__title {
+        font-size: 25px;
+    }
+    .career__why-title {
+        font-size: 20px;
+    }
+    .career__why-box-item-text {
+        width: 250px;
+    }
+    .line-top {
+        left: 98.5px;
+    }
+    .line-bottom {
+        left: 98.5px;
+    }
+    .training__title {
+        font-size: 20px;
+    }
+    .training__box-title {
+        font-size: 18px;
+    }
+    .training__box-text {
+        font-size: 15px;
+    }
+    .training__box-list-text {
+        font-size: 12px;
+    }
+    .training__text {
+        font-size: 14px;
+    }
+    .corporate__title {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .corporate__text {
+        font-size: 16px;
+    }
+    .vacancy {
+        border-radius: 20px;
+        padding: 20px 10px;
+    }
+    .vacancy__title {
+        font-size: 20px;
+    }
+    .vacancy__text {
+        font-size: 15px;
+    }
+    .vacancy__ul-li {
+        font-size: 12px;
+    }
+    .faq__title {
+        font-size: 20px;
+    }
+    .faq__intro {
+        font-size: 14px;
+    }
+    .faq__question {
+        font-size: 12px;
+    }
+    .faq__answer p, .faq__answer ul {
+        font-size: 10px;
+    }
+    .contact {
+        border-radius: 20px;
+    }
+    .contact__title {
+        font-size: 20px;
+    }
+    .contact__text-item:first-child {
+        font-size: 15px;
+    }
+    .contact__box {
+        padding: 5px;
+    }
+    .contact__box-email-flex h2,
+    .contact__box-social h2 {
+        font-size: 12px;
+    }
+    .contact__box-social-a a img {
+        width: 25px;
+    }
+    .contact__location-title {
+        font-size: 20px;
+    }
+    .contact__location-city {
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+    .contact__location-text {
+        font-size: 12px;
+        text-align: center;
+    }
+    .footer {
+        padding: 30px 10px;
+    }
+    .footer__box-title {
+        font-size: 14px;
+    }
+    .footer__box-ul a {
+        font-size: 10px;
+    }
+    .footer__tell p {
+        font-size: 10px;
+    }
 }
