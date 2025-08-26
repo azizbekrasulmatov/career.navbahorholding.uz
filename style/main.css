@@ -249,7 +249,7 @@ img, video {
     border: 2px solid black;
     border-radius: 10px;
     padding: 10px 20px;
-    height: -webkit-fill-available;
+    height: 100%;
 }
 .direction__box-item img {
     border: 2px black solid;
