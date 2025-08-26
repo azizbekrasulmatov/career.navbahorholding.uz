@@ -261,7 +261,7 @@ img, video {
 .direction__box-item-text {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 320px;
     gap: 10px;
 }
 .direction__box-item-text h2 {
@@ -564,6 +564,7 @@ img, video {
     text-align: center;
     margin-bottom: 20px;
     font-family: 'MB';
+    color: black;
 }
 .faq__intro {
     text-align: center;
@@ -665,7 +666,7 @@ img, video {
     padding: 30px;
     align-items: center;
     justify-content: space-around;
-    gap: 10px;
+    gap: 30px;
 }
 .contact__box-tell {
     display: flex;
@@ -673,6 +674,7 @@ img, video {
     gap: 5px;
     padding: 15px 20px;
     border-radius: 20px;
+    border: 2px solid  hsl(151, 53%, 78%);
     width: 100%;
     background: #f5fffa;
 }
@@ -739,6 +741,7 @@ img, video {
 .contact__box-email {
     display: flex;
     flex-direction: column;
+    border: 2px solid  hsl(151, 53%, 78%);
     gap: 10px;
     padding: 15px 20px;
     border-radius: 20px;
@@ -776,6 +779,7 @@ img, video {
 /* social */
 
 .contact__box-social {
+    border: 2px solid  hsl(151, 53%, 78%);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -815,6 +819,7 @@ img, video {
 }
 .contact__box,
 .contact__box-tell-block > div,
+.contact__box-tell-block ul li,
 .contact__box-email,
 .contact__box-social {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
@@ -1037,6 +1042,8 @@ img, video {
 @media (max-width: 1320px) {
     .direction__box {
         flex-wrap: wrap;
+        height: 100%;
+        gap: 20px;
     }
 }
 
@@ -1079,14 +1086,14 @@ img, video {
     .welcome__title {
         font-size: 25px;
     }
+    .welcome__box {
+        padding: 0 20px;
+    }
     .welcome__box-text p {
         font-size: 20px;
     }
-    .welcome__box-img:first-child {
-        height: 150px;
-    }
-    .welcome__box-img:last-child {
-        height: 120px;
+    .welcome__box-img {
+        display: none;
     }
     .direction__text {
         font-size: 25px;
@@ -1133,6 +1140,10 @@ img, video {
     }
     .direction__box-item {
         width: 300px;
+        flex-direction: column;
+    }
+    .direction__box-item-text {
+        width: 100%;
     }
     .direction__box-item img {
         width: 40px;
@@ -1153,11 +1164,11 @@ img, video {
     .career__why-box-item-text p {
         font-size: 16px;
     }
-    .direction__box-item-text p, h2 {
-        font-size: 12px;
+    .direction__box-item-text p {
+        font-size: 16px;
     }
     .direction__box-item-text h2 {
-        font-size: 16px;
+        font-size: 20px;
     }
     .arrow {
         width: 30px;
@@ -1185,13 +1196,16 @@ img, video {
         font-size: 14px;
     }
     .training__text {
-        font-size: 16px;
+        font-size: 18px;
     }
     .corporate__box-item {
-        height: 210px;
+        height: 100%;
     }
     .corporate__box-item img {
-        width: 180px;
+        width: 250px;
+    }
+    .corporate__box-item p {
+        font-size: 18px;
     }
     .corporate__title {
         font-size: 25px;
@@ -1257,6 +1271,9 @@ img, video {
 }
 
 @media (max-width: 700px) {
+    .direction__box-item {
+        width: 100%;
+    }
     .vacancy__link {
         width: 200px;
         padding: 10px;
@@ -1277,6 +1294,10 @@ img, video {
         font-size: 25px;
         width: 365px;
     }
+    .career__box {
+        height: 100%;
+        padding: 50px 25px 25px 25px;
+    }
 }
 
 @media (max-width: 540px) {
@@ -1287,14 +1308,12 @@ img, video {
         width: 100%;
     }
     .contact__location-map iframe {
-        width: 320px;
+        width: 100% !important;
+        height: 300px;
     }
 }
 
 @media (max-width: 480px) {
-    .nav__logo img {
-        width: 100px;
-    }
     .header__content-box {
         gap: 10px;
     }
@@ -1306,16 +1325,11 @@ img, video {
         width: 273px;
     }
     .welcome__title {
-        font-size: 15px;
+        margin-top: -50px;
+        font-size: 16px;
     }
     .welcome__box {
         margin-top: 30px;
-    }
-    .welcome__box-img:first-child {
-        height: 110px;
-    }
-    .welcome__box-img:last-child {
-        height: 80px;
     }
     .welcome__box-text {
         border-radius: 20px;
@@ -1323,7 +1337,7 @@ img, video {
         gap: 20px;
     }
     .welcome__box-text p {
-        font-size: 12px;
+        font-size: 16px;
     }
     .direction {
         margin-top: 20px;
@@ -1375,7 +1389,7 @@ img, video {
         font-size: 12px;
     }
     .training__text {
-        font-size: 14px;
+        font-size: 16px;
     }
     .corporate__title {
         margin-top: 20px;
@@ -1413,20 +1427,17 @@ img, video {
         border-radius: 20px;
     }
     .contact__title {
-        font-size: 20px;
+        font-size: 24px;
     }
     .contact__text-item:first-child {
-        font-size: 15px;
+        font-size: 16px;
     }
     .contact__box {
-        padding: 5px;
+        gap: 30px;
     }
     .contact__box-email-flex h2,
     .contact__box-social h2 {
         font-size: 12px;
-    }
-    .contact__box-social-a a img {
-        width: 25px;
     }
     .contact__location-title {
         font-size: 20px;
