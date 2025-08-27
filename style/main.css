@@ -240,11 +240,9 @@ img, video {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    height: 100%;
 }
 .direction__box-item {
     display: flex;
-    justify-content: center;
     gap: 20px;
     border: 2px solid black;
     border-radius: 10px;
@@ -261,6 +259,7 @@ img, video {
 .direction__box-item-text {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     width: 320px;
     gap: 10px;
 }
@@ -1139,8 +1138,9 @@ img, video {
         font-size: 20px;
     }
     .direction__box-item {
-        width: 300px;
+        width: 100%;
         flex-direction: column;
+        padding: 20px;
     }
     .direction__box-item-text {
         width: 100%;
@@ -1215,6 +1215,7 @@ img, video {
     }
     .vacancy {
         padding: 20px 40px;
+        border-radius: 80px;
     }
     .vacancy__title {
         font-size: 25px;
@@ -1241,6 +1242,9 @@ img, video {
     }
     .faq__answer p, .faq__answer ul {
         font-size: 14px;
+    }
+    .contact {
+        border-radius: 70px 70px 0 0;
     }
     .contact__title {
         font-size: 25px;
@@ -1292,7 +1296,7 @@ img, video {
     }
     .header__content-text {
         font-size: 25px;
-        width: 365px;
+        width: 362px;
     }
     .career__box {
         height: 100%;
@@ -1322,7 +1326,7 @@ img, video {
     }
     .header__content-text {
         font-size: 20px;
-        width: 273px;
+        width: 272px;
     }
     .welcome__title {
         margin-top: -50px;
