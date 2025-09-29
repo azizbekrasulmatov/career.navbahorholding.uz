@@ -121,9 +121,9 @@ img, video {
     line-height: 1.1;
 }
 .header__content-text {
-    width: 720px;
+    width: 725px;
     line-height: 1.2;
-    font-size: 55px;
+    font-size: 56px;
     font-family: 'MM';
     color: white;
     text-align: justify;
@@ -1120,7 +1120,7 @@ img, video {
     }
     .header__content-text {
         font-size: 35px;
-        width: 545px;
+        width: 541px;
     }
     .welcome__title {
         font-size: 20px;
