@@ -238,7 +238,7 @@ img, video {
 .direction__box {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 10px;
 }
 .direction__box-item {
@@ -247,7 +247,10 @@ img, video {
     border: 2px solid black;
     border-radius: 10px;
     padding: 10px 20px;
-    height: 100%;
+    min-height: 140px;
+    flex: 110;
+    align-items: center;
+    justify-content: center;
 }
 .direction__box-item img {
     border: 2px black solid;
