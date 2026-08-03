@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-07-23',
   devtools: { enabled: true },
 
+  runtimeConfig: {
+    // Переопределяется переменной окружения NUXT_HH_USER_AGENT
+    hhUserAgent: 'career.navbahorholding.uz/1.0 (hr@navbahorholding.uz)',
+  },
+
   css: [
     '~/assets/css/fonts.css',
     '~/assets/css/main.css',

@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import type { HhVacanciesResponse } from '#shared/types/hh'
 
-// Вакансии всегда загружаются в браузере (server: false), чтобы на статичном
-// хостинге список оставался актуальным, а не «замораживался» при сборке.
-const { data, status } = useFetch<HhVacanciesResponse>('https://api.hh.ru/vacancies', {
-  query: { employer_id: '4893760' },
-  server: false,
-})
+const { data, status } = await useFetch<HhVacanciesResponse>('/api/vacancies')
 
 const vacancies = computed(() => data.value?.items ?? [])
 </script>
