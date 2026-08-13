@@ -6,6 +6,10 @@ export default defineNuxtConfig({
   runtimeConfig: {
     // Переопределяется переменной окружения NUXT_HH_USER_AGENT
     hhUserAgent: 'career.navbahorholding.uz/1.0 (hr@navbahorholding.uz)',
+    // Токен приложения hh.ru (grant_type=client_credentials, https://dev.hh.ru).
+    // С апреля 2026 GET /vacancies без авторизации возвращает 403.
+    // Переопределяется переменной окружения NUXT_HH_TOKEN
+    hhToken: '',
   },
 
   css: [
